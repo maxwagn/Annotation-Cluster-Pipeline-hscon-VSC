@@ -1,5 +1,5 @@
 
-# Gouania pigra annotation workflow code bundle
+# Gouania pigra annotation workflow code bundle for hscon VSC
 
 This folder is a cleaned, shareable code bundle for the *Gouania pigra* annotation workflow. It focuses on the scripts and example configuration files that were actually used to produce the final annotation release.
 
