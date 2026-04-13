@@ -1,0 +1,36 @@
+species: "Gouania pigra"
+buscodb: "actinopterygii_odb10"
+augustus_species: "zebrafish"
+funannotate_db_dir: "/scratch/antwerpen/grp/asvardal/projects/clingfishes/projects/pigra_ref_genome/annotation/funannotate_db"
+
+genome: "/scratch/antwerpen/grp/asvardal/projects/clingfishes/projects/pigra_ref_genome/annotation/annotato_results/04.Gene_predict/Funannotate/output/predict_misc/genome.softmasked.fa"
+protein: "/scratch/antwerpen/grp/asvardal/projects/clingfishes/projects/pigra_ref_genome/annotation/proteom_db/protein_evidence_combined.fa"
+
+outdir: "/scratch/antwerpen/grp/asvardal/projects/clingfishes/projects/pigra_ref_genome/annotation/annotato_results_braker"
+tracedir: "/scratch/antwerpen/grp/asvardal/projects/clingfishes/projects/pigra_ref_genome/annotation/annotato_trace_braker"
+tmpdir: "/tmp/vsc20570_annotato_tmp_braker"
+
+organism: "other"
+ploidy: 2
+run_braker: true
+
+skip_rename: true
+skip_all_masking: true
+#skip_denovo_masking: false
+skip_functional_annotation: true
+skip_read_preprocessing: false
+
+rnaseq:
+  - sample_id: "fGouPig_RNAseq_24"
+    R1: "/scratch/antwerpen/grp/asvardal/projects/clingfishes/projects/pigra_ref_genome/raw_data/RNA-SeQ/fGouPig_RNA-seq_24_1.fq.gz"
+    R2: "/scratch/antwerpen/grp/asvardal/projects/clingfishes/projects/pigra_ref_genome/raw_data/RNA-SeQ/fGouPig_RNA-seq_24_2.fq.gz"
+    read_type: "short"
+
+runtime:
+  max_cpus: 24
+  max_time: "7d"
+  container_cache_dir: "/scratch/antwerpen/205/vsc20570/apptainer_cache"
+  container_tmp_dir: "/tmp"
+
+nextflow:
+  work_dir: "/tmp/vsc20570_annotato_work_braker"
